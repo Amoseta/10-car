@@ -8,18 +8,20 @@ class Car {
     }
 
     turnOn() {
+        this.engine = true;
+        console.log('Variklis ijungtas!');
+        
         if (!this.ok) {
             console.log('Masina neveikia');
         }
-
+        
         if (!this.engine) {
             this.ok = false;
             this.engine = false;
             console.log('Sveikinu, sugadinai starteri!');
             return false;
         }
-        this.engine = true;
-        console.log('Variklis ijungtas!');
+        
     }    
     turnOff() {  
         if (this.engine) {
@@ -37,15 +39,14 @@ class Car {
         const maxDistanceAvailable = this.tank / this.consumption * 100;
         if (maxDistanceAvailable >= distance) {
             this.mileage += distance;
-            this.tank -= distaance * this.consumption / 100;
+            this.tank -= distance * this.consumption / 100;
             console.log('Nuvaziavo: ', distance);
         } else {
             this.mileage += this.maxDistanceAvailable;
             console.log('Nuvaziavo: ', maxDistanceAvailable);
             this.tank = 0;
             this.turnOff();
-            console.log('Bake per mazai norimam atstumui: nuvaziavo ${this.maxDistanceAvailable} ir liko nuvaziuoti ${distance - this.maxDistanceAvailable}');
-
+           console.log('Bake per mazai norimam atstumui: nuvaziavo ${this.maxDistanceAvailable} ir liko nuvaziuoti ${distance - this.maxDistanceAvailable}');
         }
 
     }
