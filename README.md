@@ -8,8 +8,6 @@ _Amoseta's _js_objects
 
 This project is exceptionally for educational purposes only. Pull request are welcome, but priority is for myself for a start! Thank you for cooperation!
 
-Site published at https://amoseta.github.io/10-car/
-
 ## Project features:
 - objective jS basics: class, constructor, summary, add, edit, remove, print
 - objective jS basics: explanation of homework
